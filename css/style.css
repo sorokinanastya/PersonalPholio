@@ -1,0 +1,310 @@
+html {
+    font-size: 15px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: white;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background: #000 url("../img/bg.png") center no-repeat;
+    position: relative;
+}
+
+/* Header */
+
+.header {
+    background-color: #2b7ded;
+    padding: 10px 0;
+    margin-bottom: 110px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+}
+
+.header-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 1rem;
+    transition: color .2s;
+}
+
+.header-logo {
+    display: block;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav-link.active {
+    position: relative;
+}
+.header-nav-link.active:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    background-color: white;
+
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.header-nav-link:hover {
+    color: cornflowerblue;
+
+}
+
+/* Main */
+
+.subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, .6);
+    font-weight: 300;
+    margin-bottom: 16px;
+
+}
+
+.title {
+    font-size: 2rem;
+    color:#fff;
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-bottom: 43px;
+}
+
+span {
+    color: #2b7ded;
+}
+
+.text {
+    width: 556px;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 50px;
+
+
+}
+
+
+.content {
+
+}
+/* BTN */
+.btn {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+
+    background-color: #2b7ded;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 11px 35px;
+    transition: background .2s linear;
+}
+
+.btn:hover {
+    background-color: #0a63db;
+}
+
+
+/* img */
+
+.author {
+    position: absolute;
+    right: 64px;
+    bottom: 0;
+}
+
+
+
+/* Footer============================= */
+
+.footer {
+    position: absolute;
+    bottom: 47px;
+    left: 0;
+    width: 100%;
+}
+
+.contacts-link {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.contacts-link:hover {
+    text-decoration: underline;
+
+}
+
+.contacts {
+    display: flex;
+}
+
+.contacts-link:first-child{
+    margin-right: 40px;
+}
+.contacts-link:last-child {
+
+}
+
+.contacts-link:last-child:after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 2px;
+
+    background-color: #fff;
+
+    left: 100%;
+    top: -12px;
+    margin-left: 26px;
+    pointer-events: none;
+}
+
+
+
+/*Contacts form*/
+
+.form {
+    width: 100%;
+    max-width: 280px;
+}
+
+.input, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, .1);
+    color: white;
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 5px;
+    width:280px;
+}
+
+.input::placeholder, textarea::placeholder {
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.textarea {
+    resize: none;
+    max-width: 280px;
+    width: 100%;
+    height: 100px;
+}
+
+.btn {
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+    width: 280px;
+}
+
+
+
+/* Media
+=================*/
+
+@media (max-width: 1000px) {
+
+    .author {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    /* Header */
+    .header-logo {
+        display: none;
+    }
+
+    .header-brand {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 565px) {
+
+    .content {
+        text-align: center;
+    }
+
+    /* Header */
+    .header-inner {
+        flex-direction: column;
+    }
+
+    .header-brand {
+        margin-bottom: 1rem;
+    }
+
+    /* Contacts */
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contacts-link {
+        margin-right: 0;
+        margin-bottom: .5rem;
+    }
+
+    .contacts-link:last-child {
+        margin-bottom: 0;
+    }
+
+    .contacts-link:last-child:after {
+        display: none;
+    }
+}
